@@ -52,6 +52,8 @@
                         "portrait": { "place": { "x": "50%", "y": "71%", "anchor": "center", "width": "96%", "height": "28%" } } },
       "arrangement":  "stack",
       "group_layout": "slots",
+      "slot_labels":  "always",
+      "slot_label_place": { "x": "50%", "y": "0%", "anchor": "bottom" },
       "slots": [
         { "match": { "rank": "3", "color": "red" }, "label": "3" },
         { "match": { "rank": "4" },  "label": "4" },
@@ -171,6 +173,14 @@
       "affects": { "teams": false }
     }
   ],
+  "score_card": {
+    "label": "Scores",
+    "view": "total",
+    "by": "team",
+    "round_label": "R",
+    "max_rounds": 4,
+    "place": { "x": "87.5%", "y": "66.5%", "anchor": "top-left", "width": "11.5%", "height": "18%" }
+  },
   "ui": {
     "show_card_values": true
   },
