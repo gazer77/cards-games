@@ -1,0 +1,42 @@
+# Plays every game in this repository through the Cards engine. Runs on every push and
+# pull request: a definition that does not load, validate, lay out, or play through to
+# the end with computer players fails here, not at somebody's table.
+name: Check the games
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: These games
+        uses: actions/checkout@v4
+        with:
+          path: games-repo
+
+      - name: The engine
+        uses: actions/checkout@v4
+        with:
+          repository: gazer77/cards
+          ref: development
+          path: engine
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Put these games in the engine
+        run: |
+          rm -rf engine/games
+          mkdir engine/games
+          cp -r games-repo/*.json games-repo/help engine/games/
+
+      # Recorded results, timings and difficulty margins belong to the engine's own
+      # releases; a changed or new game legitimately moves them.
+      - name: Check every game
+        run: >
+          dotnet test engine/tests/Cards.Tests/Cards.Tests.csproj -c Release
+          --filter "FullyQualifiedName!~PaintCost&FullyQualifiedName!~GoldenMaster&FullyQualifiedName!~DifficultyTests&FullyQualifiedName!~PacingTests"
