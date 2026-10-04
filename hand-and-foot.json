@@ -106,7 +106,7 @@
       "go_out_condition": {
         "all": [
           { "books_at_least": 1, "kind": "natural" },
-          { "books_at_least": 1, "kind": "wild" }
+          { "books_at_least": 1, "kind": "dirty" }
         ]
       },
       "round_ends_when": "stock_exhausted",
@@ -131,6 +131,7 @@
     "book_size": 7,
     "bonus_cards": [ { "card": { "rank": "3", "color": "red" }, "in": "meld", "points": 100 } ],
     "natural_canasta_bonus": 500,
+    "mixed_canasta_bonus": 300,
     "wild_canasta_bonus": 1000,
     "go_out_bonus": 100,
     "accumulate": true,
@@ -171,6 +172,22 @@
       "description": "Each player scores individually, even with 4 or 6 players.",
       "default": false,
       "affects": { "teams": false }
+    },
+    {
+      "id": "wild_books",
+      "name": "Wild Books",
+      "description": "Wilds may be melded on their own — three to start, seven to a wild book (1,000 points). Going out takes a wild book as well as a clean and a dirty one.",
+      "default": false,
+      "affects": {
+        "play.wild_melds": true,
+        "play.go_out_condition": {
+          "all": [
+            { "books_at_least": 1, "kind": "natural" },
+            { "books_at_least": 1, "kind": "dirty" },
+            { "books_at_least": 1, "kind": "all_wild" }
+          ]
+        }
+      }
     }
   ],
   "score_card": {

@@ -18,6 +18,11 @@ A meld is 3 or more cards of the same rank. Each meld must contain at least 2 na
 - **Clean book (red book):** 7 natural cards, no wilds — 500 point bonus
 - **Dirty book (black book):** 7 cards with at least one wild — 300 point bonus
 
+On the table, each meld wears a green **clean** or orange **dirty** badge.
+
+### House rule: Wild Books
+With **Wild Books** turned on, wilds may also be melded on their own: three or more to start a wild meld, and seven make a **wild book** — 1,000 point bonus. Wilds added later go onto the wild meld. Going out then takes a wild book as well as a clean and a dirty one.
+
 ## Gameplay
 On your turn: draw 2 cards from the stock (or take the discard pile under certain conditions), lay down or add to melds, then discard one card.
 
