@@ -70,8 +70,8 @@
         { "match": { "wild": true }, "label": "W", "when": "wild_melds" }
       ],
       "group_badges": [
-        { "shows": "clean", "text": "clean", "color": "#A5D66F", "text_color": "#1B4D1B" },
-        { "shows": "dirty", "text": "dirty", "color": "#F28C28", "text_color": "#FFFFFF" }
+        { "shows": "clean", "color": "#A5D66F", "text_color": "#1B4D1B", "zero": "–" },
+        { "shows": "dirty", "color": "#F28C28", "text_color": "#FFFFFF", "zero": "–" }
       ] }
   ],
   "phases": [
