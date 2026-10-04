@@ -70,8 +70,8 @@
         { "match": { "wild": true }, "label": "W" }
       ],
       "group_badges": [
-        { "shows": "loose", "color": "#A5D66F", "text_color": "#1B4D1B", "zero": "–" },
-        { "shows": "books", "color": "#F28C28", "text_color": "#FFFFFF" }
+        { "shows": "clean", "text": "clean", "color": "#A5D66F", "text_color": "#1B4D1B" },
+        { "shows": "dirty", "text": "dirty", "color": "#F28C28", "text_color": "#FFFFFF" }
       ] }
   ],
   "phases": [
