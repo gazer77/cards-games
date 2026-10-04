@@ -67,7 +67,7 @@
         { "match": { "rank": "Q" },  "label": "Q" },
         { "match": { "rank": "K" },  "label": "K" },
         { "match": { "rank": "A" },  "label": "A" },
-        { "match": { "wild": true }, "label": "W" }
+        { "match": { "wild": true }, "label": "W", "when": "wild_melds" }
       ],
       "group_badges": [
         { "shows": "clean", "text": "clean", "color": "#A5D66F", "text_color": "#1B4D1B" },
